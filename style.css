@@ -1,0 +1,29 @@
+.cherry-blossom {
+    background-color: #fef9f5;
+    animation: falling 10s infinite;
+    position: relative;
+}
+
+.cherry-blossom::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.cherry-blossom:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
